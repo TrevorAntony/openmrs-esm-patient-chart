@@ -122,8 +122,6 @@ const TreeView: React.FC<TreeViewProps> = ({ patientUuid, basePath, testUuid, lo
           <Trendline patientUuid={patientUuid} conceptUuid={testUuid} basePath={basePath} showBackToTimelineButton />
         ) : loading || isLoadingPanelData ? (
           <DataTableSkeleton />
-        ) : someChecked ? (
-          <GroupedTimeline />
         ) : view === 'individual-test' ? (
           <div className={styles.panelViewTimeline}>
             <GroupedPanelsTables loadingPanelData={loading} />
